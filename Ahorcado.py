@@ -3,7 +3,6 @@ import random
 def seleccionar_palabra():
     palabras = ["python", "programacion", "computadora", "tecnologia", "inteligencia", "robotica"]
     return random.choice(palabras)
-
 def mostrar_ahorcado(intentos):
     graficos_ahorcado = [
         """
@@ -71,15 +70,16 @@ def mostrar_ahorcado(intentos):
         """
     ]
     return graficos_ahorcado[intentos]
-
 def jugar_ahorcado():
     palabra = seleccionar_palabra()
-    palabra = palabra.lower()
-    palabra_adivinada = "_" * len(palabra)
+    palabra = palabra.lower() #M m
+    palabra_adivinada = ['_' if letra.isalpha() else letra for letra in palabra]
     intentos = 6
-    letras_adivinadas = []
-    #Mostrar una pista
-    print(f"La palabra es: {palabra[0]}{'_ ' * (len(palabra) - 2)}{palabra[-1]}")
+    letras_adivinadas = [] # A A
+    palabra_adivinada[0] = palabra[0] # a__-__
+    palabra_adivinada[-1] = palabra[-1] #_______d
+    print(f"La palabra es: {' '.join(palabra_adivinada)}")
+
     while intentos > 0 and "_" in palabra_adivinada:
         letra = input("Adivina una letra: ").lower()
 
@@ -90,15 +90,16 @@ def jugar_ahorcado():
         letras_adivinadas.append(letra)
 
         if letra in palabra:
-            indices = [i for i, l in enumerate(palabra) if l == letra]
-            for idx in indices:
-                palabra_adivinada = palabra_adivinada[:idx] + letra + palabra_adivinada[idx + 1:]
+            for idx, l in enumerate(palabra):
+                if l == letra:
+                    palabra_adivinada[idx] = letra
+                    # A
         else:
             intentos -= 1
             print(f"La letra '{letra}' no está en la palabra. Te quedan {intentos} intentos.")
             print(mostrar_ahorcado(6 - intentos))
 
-        print(f"Palabra: {palabra_adivinada}")
+        print(f"Palabra: {' '.join(palabra_adivinada)}")
         print(f"Letras adivinadas: {', '.join(letras_adivinadas)}")
 
     if "_" not in palabra_adivinada:
@@ -106,6 +107,5 @@ def jugar_ahorcado():
     else:
         print(f"Perdiste. La palabra era '{palabra}'.")
 
-if __name__ == "__main__":
-    print("Juego del Ahorcado")
-    jugar_ahorcado()
+print("Juego del Ahorcado")
+jugar_ahorcado()
