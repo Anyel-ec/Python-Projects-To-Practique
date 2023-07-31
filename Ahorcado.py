@@ -78,7 +78,8 @@ def jugar_ahorcado():
     palabra_adivinada = "_" * len(palabra)
     intentos = 6
     letras_adivinadas = []
-
+    #Mostrar una pista
+    print(f"La palabra es: {palabra[0]}{'_ ' * (len(palabra) - 2)}{palabra[-1]}")
     while intentos > 0 and "_" in palabra_adivinada:
         letra = input("Adivina una letra: ").lower()
 
