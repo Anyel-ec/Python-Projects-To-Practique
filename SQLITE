@@ -1,0 +1,25 @@
+import sqlite3
+
+# Conectar a la base de datos (creará el archivo si no existe)
+conexion = sqlite3.connect('mi_base_de_datos.db')
+
+# Crear un cursor para ejecutar comandos SQL
+cursor = conexion.cursor()
+
+# Definir el comando SQL para crear la tabla
+comando_sql = '''
+CREATE TABLE IF NOT EXISTS usuarios (
+    id INTEGER PRIMARY KEY,
+    nombre TEXT,
+    edad INTEGER
+)
+'''
+
+# Ejecutar el comando SQL para crear la tabla
+cursor.execute(comando_sql)
+
+# Guardar los cambios y cerrar la conexión
+conexion.commit()
+conexion.close()
+
+print("Tabla creada exitosamente.")
