@@ -1,51 +1,51 @@
-# Ejemplos de Python para Implementar en Aplicaciones
+# Python Examples for Implementation in Applications
 
-Este repositorio contiene varios ejemplos sencillos en Python que puedes utilizar como referencia o implementar en tus propias aplicaciones. Estos ejemplos abarcan una variedad de temas y funcionalidades. A continuación, se presenta una lista de los ejemplos disponibles:
+This repository contains several simple Python examples that you can use as a reference or implement in your own applications. These examples cover a variety of topics and functionalities. Below is a list of the available examples:
 
-- **MVC Python:** Implementación de un patrón Modelo-Vista-Controlador en Python.
+- **MVC Python:** Implementation of the Model-View-Controller (MVC) pattern in Python.
 
-- **API.py:** Creación de una API en Python para servicios web.
+- **API.py:** Creating a Python API for web services.
 
-- **Ahorcado.py:** Juego de ahorcado implementado en Python.
+- **Ahorcado.py:** Implementation of the Hangman game in Python.
 
-- **ArbolDecision-Suma.py:** Ejemplo de un árbol de decisión para sumar números.
+- **ArbolDecision-Suma.py:** An example of a decision tree for adding numbers.
 
-- **Array.py:** Ejemplo de manejo de arrays en Python.
+- **Array.py:** An example of handling arrays in Python.
 
-- **BinarySearch.py:** Implementación de búsqueda binaria en Python.
+- **BinarySearch.py:** Implementation of binary search in Python.
 
-- **CRUD-MySql.py:** Operaciones CRUD con MySQL en Python.
+- **CRUD-MySql.py:** CRUD operations with MySQL in Python.
 
-- **CRUD-PostgreSQL.py:** Operaciones CRUD con PostgreSQL en Python.
+- **CRUD-PostgreSQL.py:** CRUD operations with PostgreSQL in Python.
 
-- **Caesar encryption.py:** Implementación de cifrado César en Python.
+- **Caesar encryption.py:** Implementation of Caesar encryption in Python.
 
-- **GameSnake.pt:** Juego de la serpiente (Snake Game) en Python.
+- **GameSnake.pt:** Snake Game implemented in Python.
 
-- **GeneratePassword.py:** Generador de contraseñas en Python.
+- **GeneratePassword.py:** Password generator in Python.
 
-- **ModelMachineLearningSum.py:** Modelo de aprendizaje automático para sumar números.
+- **ModelMachineLearningSum.py:** Machine learning model for summing numbers.
 
-- **Puertos.py:** Escaneo de puertos en Python.
+- **Puertos.py:** Port scanning in Python.
 
-- **SQLITE:** Ejemplos de uso de la base de datos SQLite en Python.
+- **SQLITE:** Examples of using the SQLite database in Python.
 
-- **SendMail.py:** Envío de correos electrónicos en Python.
+- **SendMail.py:** Sending emails in Python.
 
-- **SendingMail.py:** Ejemplo de envío de correos electrónicos con Python.
+- **SendingMail.py:** An example of sending emails with Python.
 
-- **TextInPDF.py:** Creación de archivos PDF con texto en Python.
+- **TextInPDF.py:** Creating PDF files with text in Python.
 
-- **Token Simulacion.py:** Simulación de tokens en Python.
+- **Token Simulacion.py:** Token simulation in Python.
 
-- **check_existing_mail.py:** Verificación de correos electrónicos existentes en Python.
+- **check_existing_mail.py:** Verification of existing email addresses in Python.
 
-- **extractImageBackground.py:** Extracción del fondo de una imagen en Python.
+- **extractImageBackground.py:** Background removal from an image in Python.
 
-- **hash_sha256.py:** Uso de la función hash SHA-256 en Python.
+- **hash_sha256.py:** Using the SHA-256 hash function in Python.
 
-- **verifySecurePassword.py:** Verificación de contraseñas seguras en Python.
+- **verifySecurePassword.py:** Verification of secure passwords in Python.
 
-Cada ejemplo incluye un archivo individual con su código correspondiente. Siéntete libre de explorar, modificar y utilizar estos ejemplos según tus necesidades.
+Each example includes an individual file with its corresponding code. Feel free to explore, modify, and use these examples as needed for your projects in Python.
 
-¡Esperamos que estos ejemplos te sean útiles para tus proyectos en Python!
+We hope these examples prove to be useful for your Python projects!
