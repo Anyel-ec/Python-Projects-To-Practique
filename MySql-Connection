@@ -1,0 +1,18 @@
+import mysql.connector
+
+# Configura los parámetros de la conexión a la base de datos
+conexion = mysql.connector.connect(
+    host="tu_host",
+    user="tu_usuario",
+    password="tu_contraseña",
+    database="tu_base_de_datos"
+)
+
+# Comprueba si la conexión se realizó con éxito
+if conexion.is_connected():
+    print("Conexión exitosa a la base de datos")
+else:
+    print("Error en la conexión")
+
+# Cierra la conexión cuando hayas terminado
+conexion.close()
