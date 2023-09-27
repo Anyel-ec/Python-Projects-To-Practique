@@ -1,0 +1,25 @@
+import cv2
+
+# Inicializar la cámara
+cap = cv2.VideoCapture(0)  # El argumento 0 representa la cámara predeterminada
+
+# Verificar si la cámara se abrió correctamente
+if not cap.isOpened():
+    print("No se pudo abrir la cámara")
+else:
+    # Capturar un cuadro (imagen) de la cámara
+    ret, frame = cap.read()
+
+    if ret:
+        # Guardar la imagen como un archivo JPG
+        cv2.imwrite("imagen.jpg", frame)
+
+        # Liberar la cámara
+        cap.release()
+
+        print("Imagen guardada como 'imagen.jpg'")
+    else:
+        print("No se pudo capturar una imagen")
+
+# Cerrar la ventana de la cámara
+cv2.destroyAllWindows()
