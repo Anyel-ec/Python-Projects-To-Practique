@@ -1,0 +1,17 @@
+import psutil
+
+def listar_procesos():
+    # Obtener una lista de todos los procesos en ejecución
+    procesos = psutil.process_iter()
+    
+    # Iterar sobre la lista de procesos y mostrar sus nombres
+    for proceso in procesos:
+        try:
+            # Obtener el nombre del proceso
+            nombre = proceso.name()
+            
+            # Imprimir el nombre del proceso
+            print(f"Nombre del proceso: {nombre}")
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+listar_procesos()
