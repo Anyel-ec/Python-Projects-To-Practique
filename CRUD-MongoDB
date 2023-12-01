@@ -1,0 +1,38 @@
+import pymongo
+
+# Connect to the database
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+database = client["my_database"]
+collection = database["my_collection"]
+
+def create_document(data):
+    # Create a document in the collection
+    result = collection.insert_one(data)
+    print(f"Document created with ID: {result.inserted_id}")
+
+def read_documents():
+    # Read all documents in the collection
+    cursor = collection.find()
+    for document in cursor:
+        print(document)
+
+def update_document(query, new_data):
+    # Update a document in the collection
+    result = collection.update_one(query, {"$set": new_data})
+    print(f"{result.modified_count} document(s) updated")
+
+def delete_document(query):
+    # Delete a document from the collection
+    result = collection.delete_one(query)
+    print(f"{result.deleted_count} document(s) deleted")
+
+if __name__ == "__main__":
+    # Examples of usage
+    create_document({"name": "Example", "age": 25, "city": "Example City"})
+    read_documents()
+
+    update_document({"name": "Example"}, {"$set": {"age": 26}})
+    read_documents()
+
+    delete_document({"name": "Example"})
+    read_documents()
