@@ -1,0 +1,22 @@
+import time
+
+def mensaje_epico():
+    print("****************************************************")
+    print("*                                                  *")
+    print("*         ¡Feliz Año Nuevo! by Anyel EC            *")
+    print("*  Que este año esté lleno de alegría y éxitos.    *")
+    print("*  Que cada día sea una nueva aventura.            *")
+    print("*  ¡Que todos tus sueños se hagan realidad!        *")
+    print("*  Que la felicidad te acompañe siempre.           *")
+    print("*  ¡Que tengas un año épico y lleno de logros!     *")
+    print("*                                                  *")
+    print("****************************************************")
+
+def cuenta_regresiva():
+    for i in range(10, 0, -1):
+        print(f"¡Cuenta regresiva: {i}!")
+        time.sleep(1)
+
+
+cuenta_regresiva()
+mensaje_epico()
