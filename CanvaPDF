@@ -1,0 +1,34 @@
+from reportlab.pdfgen import canvas
+
+# Solicitar datos de una persona
+nombre = input("Ingrese el nombre: ")
+edad = input("Ingrese la edad: ")
+ciudad = input("Ingrese la ciudad: ")
+
+# Imprimir los datos ingresados
+print("\nDatos de la persona:")
+print("Nombre:", nombre)
+print("Edad:", edad)
+print("Ciudad:", ciudad)
+
+# Generar PDF con los datos
+pdf_filename = "datos_persona.pdf"
+
+# Crear el documento PDF
+pdf_canvas = canvas.Canvas(pdf_filename)
+
+# Configurar el formato y la posición para mostrar los datos
+text_object = pdf_canvas.beginText(100, 700)
+text_object.setFont("Helvetica", 12)
+text_object.textLine("Datos de la persona:")
+text_object.textLine("Nombre: " + nombre)
+text_object.textLine("Edad: " + edad)
+text_object.textLine("Ciudad: " + ciudad)
+
+# Agregar los datos al PDF
+pdf_canvas.drawText(text_object)
+
+# Guardar el PDF
+pdf_canvas.save()
+
+print(f"\nLos datos se han guardado en el archivo PDF: {pdf_filename}")
